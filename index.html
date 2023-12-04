@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM 1 Campaign</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="iium-logo-removebg-preview.png" alt="">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#popup" onclick="openPopup()">Sign Up</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class=""><button class="cta">Contact</button></a>
+    </header>
+
+    <div id="about" class="button-overlay">
+        <img class="poster" src="RM 1 Campaign.png" alt="">
+        <button class="button" onclick="openPopup()">Sign Up</button>
+        <div class="popup" id="popup">
+
+            <head>Registration Form</head>
+
+            <form id="form" class="form" action="/">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Staff No.</span>
+                        <input type="text" placeholder="i.e. 2225575" required>
+                    </div>
+
+                    <div class="kcdio">
+                        <!-- <span class="details">K/C/D/I/O</span> -->
+                        <h3>K/C/D/I/O</h3>
+                        <div class="kcdio-option">
+                            <div class="options">
+                                <input type="radio" id="check-kulliyah" name="kcdio" checked />
+                                <label for="check-kulliyah">Kulliyah</label>
+                            </div>
+
+                            <div class="options">
+                                <input type="radio" id="check-centres" name="kcdio" />
+                                <label for="check-centres">Centres</label>
+                            </div>
+
+                            <div class="options">
+                                <input type="radio" id="check-departments" name="kcdio" />
+                                <label for="check-departments">Departments</label>
+                            </div>
+
+                            <div class="options">
+                                <input type="radio" id="check-institutes" name="kcdio" />
+                                <label for="check-institutes">Institutes</label>
+                            </div>
+
+                            <div class="options">
+                                <input type="radio" id="check-offices" name="kcdio" />
+                                <label for="check-offices">Offices</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" placeholder="i.e KICT" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Contact No.</span>
+                        <input type="text" placeholder="i.e 0123456789011" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="i.e staff@iium.my" required>
+                    </div>
+
+                    <div class="column">
+                        <div class="input-box">
+                            <span class="details">Starting Date</span>
+                            <input type="date" required>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">Starting Date</span>
+                            <input type="date" required>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" id="submit-button" onclick="closePopup()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+
+    <footer id="contact">
+        <div class="row">
+            <div class="col">
+                <img class="logo-footer" src="iium-logo-removebg-preview.png" alt="">
+                <h3>IIUM Endowment Fund</h3>
+                <p>Level 3, Rectory</p>
+                <p>International Islamic University</p>
+                <p>P.O. Box 10</p>
+                <p>50738 Kuala Lumpur</p>
+            </div>
+
+            <div class="col">
+                <h3>Contact</h3>
+                <p class="email-id"><i class="fa fa-envelope-o" aria-hidden="true"></i>ief@ium.edu.my</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i>+603 6196 4268</p>
+                <p><i class="fa fa-internet-explorer" aria-hidden="true"></i>www.iium.edu.my/ief                </p>
+                <p><i class="fa fa-facebook" aria-hidden="true"></i>www/facebook.com/ief.official/
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
